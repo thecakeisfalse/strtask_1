@@ -5,7 +5,12 @@ const RootDir = "folder"
 # Ниже реализуйте требуемую задачу
 var dirs, files, exts: seq[string]
 
+dirs = getDirs(RootDir).mapIt($(it.replace(" ", "_")))
+files = getFiles(RootDir)
 
+for file in files:
+    let (_, _, ext) = splitFile(file)
+    exts.add(ext)
 
 # Не изменяйте код ниже
 import sets
