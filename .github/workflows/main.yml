@@ -1,6 +1,6 @@
 name: "Основы Nim: Знакомство с языком"
 
-on: [push, workflow_dispatch]
+on: [push, workflow_dispatch, pull]
 
 jobs:
   task_1:
